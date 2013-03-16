@@ -51,7 +51,7 @@
         float boxWidth = self.box.frame.size.width;
         float boxHeight = self.box.frame.size.height;
         box.frame = CGRectMake(point.x - boxWidth/2, point.y - boxHeight/2, boxWidth, boxHeight);
-        
+        UIView
         isDragging = YES;
     }
     
