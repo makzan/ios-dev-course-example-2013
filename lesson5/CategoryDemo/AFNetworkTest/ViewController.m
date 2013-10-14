@@ -24,13 +24,10 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     NSURL *imageURL = [NSURL URLWithString:@"http://placekitten.com/200/300"];
-    [networkImageView setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"loading.png"]];
+    [self.networkImageView setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"loading.png"]];
         
-    [networkImageView setX:0 andY:0];
-    
-    [UIView animateWithDuration:5 animations:^{
-        [networkImageView setX:320 andY:480];
-    }];
+    [self.networkImageView setX:0 andY:0];
+
 }
 
 - (void)viewDidUnload

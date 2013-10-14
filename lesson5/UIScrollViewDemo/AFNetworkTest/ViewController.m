@@ -27,15 +27,15 @@
     for (int i=0; i<4; i++)
     {
         UIImageView *image = [[UIImageView alloc] initWithImage:[UIImage imageNamed:@"320x460.png"]];
-        [scrollview addSubview:image];
+        [self.scrollview addSubview:image];
         
         [image setX:320 * i andY:0];
     }
     
     
-    [scrollview setContentSize:CGSizeMake(320*4, 460)];
+    [self.scrollview setContentSize:CGSizeMake(320*4, 460)];
     
-    scrollview.pagingEnabled = YES;
+    self.scrollview.pagingEnabled = YES;
     
 }
 

@@ -26,7 +26,7 @@
 	// Do any additional setup after loading the view, typically from a nib.
     
     NSURL *imageURL = [NSURL URLWithString:@"http://graph.facebook.com/makzan/picture?type=large"];
-    [networkImageView setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"loading.png"]];
+    [self.networkImageView setImageWithURL:imageURL placeholderImage:[UIImage imageNamed:@"loading.png"]];
 
     
     NSURL *url = [NSURL URLWithString:@"http://graph.facebook.com/makzan"];
@@ -37,7 +37,7 @@
     AFJSONRequestOperation *operation = [AFJSONRequestOperation JSONRequestOperationWithRequest:request
                                                                                         success:^(NSURLRequest *request, NSHTTPURLResponse *response, id JSON) {
         NSLog(@"Result: %@", JSON);
-        nameLabel.text = [JSON objectForKey:@"name"];
+        self.nameLabel.text = [JSON objectForKey:@"name"];
     } failure:^(NSURLRequest *request, NSHTTPURLResponse *response, NSError *error, id JSON) {
         // Handle error here.
     }];
